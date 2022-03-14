@@ -46,6 +46,30 @@ Authorization Endpoint.
 
 {::boilerplate bcp14-tagged}
 
+# User Agent Posture Signal Dictionary
+
+The user agent posture is a dictionary of signals asserted by the web
+application or resource server about the user agent.  The structure is sent as
+an added parameter in several places during the OAuth flow, as documented in the
+subsequent sections.
+
+All user agent posture keys are OPTIONAL and MUST only be set when the attribute
+can be obtained by the web application or resource server.  The standard
+attribute keys are as follows:
+
+user_agent
+: String.  The value of the "User-Agent" header field sent by the user agent
+originating the request.
+
+ip_address
+: String.  The originating IP address of the client.
+
+An example device posture dictionary:
+
+{
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36",
+    "ip_address": "93.184.216.34"
+}
 
 # Security Considerations
 
