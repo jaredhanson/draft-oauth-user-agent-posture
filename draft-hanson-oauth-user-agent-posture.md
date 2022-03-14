@@ -29,18 +29,18 @@ posture signals to authorization servers.
 
 # Introduction
 
-OAuth 2.0 authorization servers typically determine authorization only at the
-time of interacting with the resource owner.  This authorization results in an
-ongoing session in which protected resources may be accessed over a period of
-hours or even days.  Increasingly however, authorization of a session needs to
-be based on dynamic data such as IP address or browser version.
+OAuth 2.0 {{!RFC6749}} authorization servers typically determine authorization
+only at the time of interacting with the resource owner.  This authorization
+results in an ongoing session in which protected resources may be accessed over
+a period of hours or even days.  Increasingly however, authorization of a
+session needs to be based on dynamic data such as IP address or browser version.
 
 This document details how web applications and resource servers can communicate
 user agent posture signals to authorization servers via the OAuth 2.0 Token
-Endpoint and Introspection Endpoint.  These signals enable an authorization
-server to enforce policy compliance "in-band" of an existing session, rather
-than enforcement only at the time of session initiation via the Authorization
-Endpoint.
+Endpoint and Introspection Endpoint {{!RFC7662}}.  These signals enable an
+authorization server to enforce policy compliance "in-band" of an existing
+session, rather than enforcement only at the time of session initiation via the
+Authorization Endpoint.
 
 # Notational Conventions
 

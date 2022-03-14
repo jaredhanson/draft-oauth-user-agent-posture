@@ -1,4 +1,4 @@
-spec: draft-hanson-oauth-user-agent-posture.txt
+spec: draft-hanson-oauth-user-agent-posture.xml draft-hanson-oauth-user-agent-posture.txt
 
 %.xml: %.md
 	kramdown-rfc $< >$@
