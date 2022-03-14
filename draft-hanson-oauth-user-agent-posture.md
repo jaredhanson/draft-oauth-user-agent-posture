@@ -71,6 +71,37 @@ An example device posture dictionary:
     "ip_address": "93.184.216.34"
 }
 
+# Introspection Endpoint Posture Enforcement
+
+Resource servers that support this specification MUST send the user agent
+posture signals on every request to the token endpoint.
+
+Introspection Endpoints SHOULD verify that the posture conforms to their
+requirements and act accordingly.
+
+The following parameters are added to all requests to the Introspection
+Endpoint:
+
+user_agent_posture
+: JSON String.  URL-encoded JSON dictionary, contains the User Agent Posture
+Signals defined in Section 3.
+
+The following is a non-normative example request:
+
+~~~~~~~~~~
+  POST /introspect HTTP/1.1
+  Host: server.example.com
+  Accept: application/json
+  Content-Type: application/x-www-form-urlencoded
+  Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW
+
+  token=mF_9.B5f-4.1JqM&token_type_hint=access_token
+  &user_agent_posture=%7B%22user_agent%22%3A%22Mozilla%2F5.0
+  %20%28Macintosh%3B%20Intel%20Mac%20OS%20X%2010_14_5%29%20AppleWebKit%2F537.36
+  %20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F75.0.3770.142%20Safari%2F537.36%22
+  %2C%22ip_address%22%3A%2293.184.216.34%22%7D
+~~~~~~~~~~
+
 # Security Considerations
 
 TODO Security
