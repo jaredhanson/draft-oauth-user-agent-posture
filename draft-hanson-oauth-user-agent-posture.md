@@ -39,7 +39,7 @@ This document details how web applications and resource servers can communicate
 user agent posture signals to authorization servers via the OAuth 2.0 Token
 Endpoint and Introspection Endpoint {{!RFC7662}}.  These signals enable an
 authorization server to enforce policy compliance "in-band" of an existing
-session, rather than enforcement only at the time of session initiation via the
+session, rather than only at the time of session initiation via the
 Authorization Endpoint.
 
 # Notational Conventions
